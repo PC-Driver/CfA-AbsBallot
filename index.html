@@ -10,8 +10,6 @@
             tagalog translation malapit | Bản dịch tiếng việt sớm | 即将中文翻译 </p>
         <p> Please enter your information below to request your absentee ballot. If you enter your mobile number, we will send you a text confirmation</p>
         
-        <p class="successMsg" role="alert" hidden>Messages sent...</p>
-        <p class="errorMsg" role="alert" hidden>Something went wrong...</p>
         <!--- Google Translate Integration
         <div id="google_translate_element"></div>  
       
@@ -37,7 +35,7 @@
     </body>
 
 
-    <form class="center" data-netlify="true">
+    <form class="center" method="POST" data-netlify="true">
 
         <label for="fname">First name (required):</label>
         <label for="lname">Last name (required):</label><br>
@@ -81,33 +79,3 @@
 </html>
 
 
-<script>
-    const form = document.querySelector('form');
-    form.addEventListener('submit', async event => {
-      event.preventDefault();
-      
-      // disable button to prevent multiple submissions
-      form.querySelector('button').disabled = true;
-  
-      // make the request to submit the form
-      try {
-        const response = await fetch('/', {
-          method: 'post',
-          headers: {
-            'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
-          },
-          // parse and submit all included form data
-          body: new URLSearchParams(new FormData(form)).toString()
-        });
-  
-        // if it was successful show success message
-        if (response.status === 200) {
-          document.querySelector('.successMsg').hidden = false;
-        } else {
-          document.querySelector('.errorMsg').hidden = false;
-        }
-      } catch (e) {
-        console.error(e);
-      }
-    });
-  </script>
