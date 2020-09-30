@@ -1,0 +1,21 @@
+{
+  "name": "NodeItDash",
+  "version": "1.0.0",
+  "description": "Dashboard for NodeIt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"Building your new static site!\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PC-Driver/CfA-AbsBallot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PC-Driver/CfA-AbsBallot/issues"
+  },
+  "homepage": "https://github.com/PC-Driver/CfA-AbsBallot#readme"
+}
